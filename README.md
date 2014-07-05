@@ -29,4 +29,15 @@ Whereas you would want something like:
 
 Which is not very helpful to be honest. 
 
+I've modified the original script so it takes a default value and a comment, separated by ';' as seen here:
+
+    NSString *s = [NSString stringWithFormat:NSLocalizedString(@"sellertext", 
+                            @"You have sold %1$i apps yesterday;Comment for seller text"), @(123)];
+
+If you define the localizable strings like below, the UpdateCodeStrings.sh will generate this:
+
+
+    /*  Comment for seller text" */
+    "sellertext" = "You have sold %1$i apps yesterday;
+
 Original project (for the two shell scripts): https://github.com/AppliedIS/iOSL10n
