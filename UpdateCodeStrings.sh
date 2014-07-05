@@ -82,16 +82,18 @@ else
 				$(grep -q "$finalKey" $stringsFile)
 
 				if [ $? -eq 1 ]; then
-					echo "****** key is New: $finalKey"
-					
+
 					foundComment=$(echo "$foundLocalizedString" | grep -o "@\"[a-zA-Z0-9 !@#\$%\^&\*()\.,-\+']*\")")
 					commentStart="\""
 					intermediateComment=$(echo "$foundComment" | grep -o "$commentStart.*")
 
 					finalComment=$(echo "$intermediateComment" | sed "s/)//")
 
-					echo "/* $finalComment */" >> $stringsFile
-					echo "$finalKey = $finalComment;\n" >> $stringsFile
+					value=`echo $finalComment | cut -d \; -f 1`
+					comment=`echo $finalComment | cut -d \; -f 2`
+
+					echo "/* $comment */" >> $stringsFile
+					echo "$finalKey = $value;\n" >> $stringsFile
 				else
 					echo "key Exists: $finalKey"
 				fi
