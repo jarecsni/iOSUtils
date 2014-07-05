@@ -93,7 +93,7 @@ else
 					comment=`echo $finalComment | cut -d \; -f 2`
 
 					echo "/* $comment */" >> $stringsFile
-					echo "$finalKey = $value;\n" >> $stringsFile
+					echo "$finalKey = $value\";\n" >> $stringsFile
 				else
 					echo "key Exists: $finalKey"
 				fi
