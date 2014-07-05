@@ -29,4 +29,4 @@ Whereas you would want something like:
 
 Which is not very helpful to be honest. 
 
-Original project: https://github.com/AppliedIS/iOSL10n
+Original project (for the two shell scripts): https://github.com/AppliedIS/iOSL10n
