@@ -40,4 +40,6 @@ If you define the localizable strings like below, the UpdateCodeStrings.sh will 
     /*  Comment for seller text" */
     "sellertext" = "You have sold %1$i apps yesterday;
 
+If you do not want to specify a comment you will need to close the string with a ';' - yes annoying, but I have no time now to fiddle with this... and anyway, comments are good! :)
+
 Original project (for the two shell scripts): https://github.com/AppliedIS/iOSL10n
